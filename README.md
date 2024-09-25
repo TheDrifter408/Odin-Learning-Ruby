@@ -10,9 +10,9 @@ def caesar_cipher(input_str,shift_val)
   return new_str;
 end
 ```
-What the `shifted(nums, shift_val)` is adds the `shift_val` to the `nums` parameter, but first we have to treat base cases. Special characters are between numbers 32 and 64 including numbers, 91 to 96 and above 122.  
+What the function `shifted(nums, shift_val)` does is adds the `shift_val` to the `nums` parameter, but first we have to treat base cases. Special characters are between numbers 32 and 64, 91 to 96 and above 122.  
 
-If `nums` is in between those ranges we return the nums. However if `nums` is between 65 and 90 or between 97 and 122 we start our shifting. To make sure that when converting the letter 'z' to the letter 'a' or 'Z' to 'A', we have to check if the shifted value, `new_num` is equal to itself when using the modulo operator for the corresponding value of 'Z' or 'z'.
+If `nums` is in between those ranges we return the nums. However if `nums` is between 65 and 90 or between 97 and 122 we start our shifting. To make sure that when converting the letter 'z' to the letter 'a' or 'Z' to 'A' if the `shift_val` parameter is 1, we have to check if the shifted value, `new_num` is equal to itself when using the modulo operator for the corresponding value of 'Z' or 'z'.
 
 if it is not, then that means `new_nums` is greater than 90 or 122 and thus we have to use the value returned from the modulo operation and add it with the corresponding value of 64 or 96 which are the numbers that start right before 'A' or 'a'.
 
