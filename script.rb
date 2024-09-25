@@ -1,5 +1,5 @@
-def shifted(nums, shift_val = 5)
-  if nums >= 32  and nums <= 64
+def shifted(nums, shift_val)
+  if nums >= 32  and nums <= 64 || nums >= 91 and nums <= 96 || nums >= 123
     return nums
   end
   new_num = nums + shift_val;
